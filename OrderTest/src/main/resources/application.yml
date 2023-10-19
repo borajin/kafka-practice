@@ -1,0 +1,22 @@
+server:
+  port: 7002
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: order-test
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+kafka:
+  bootstrapAddress: localhost:9092
+  topic:
+    stock: "stock"
